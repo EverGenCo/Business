@@ -24,8 +24,6 @@
    </div>
    <script type="text/javascript">
     function signUp(){
-     document.getElementById("in1").value = "E-Mail";
-     document.getElementById("in2").value = "Password";
      var mail = document.getElementById("in1").value;
      var pass = document.geTelementById("in2").value;
      firebase.auth().createUserWithEmailAndPassword(mail, pass).catch(function(error){
