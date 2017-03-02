@@ -17,5 +17,28 @@
    </style>
   </head>
   <body>
+   <div align="center">
+    <input type="text" value="E-Mail" onfocus="value=''" id="in1" />
+    <input type="text" value="Password" onfocus="value=''" id="in2" />
+    <input type="button" value="SignUp" onclick="signUp()" />
+   </div>
+   <script type="text/javascript">
+    function signUp(){
+     document.getElementById("in1").value = "E-Mail";
+     document.getElementById("in2").value = "Password";
+     var mail = document.getElementById("in1").value;
+     var pass = document.geTelementById("in2").value;
+     firebase.auth().createUserWithEmailAndPassword(mail, pass).catch(function(error){
+      var eCode = error.code;
+      var eMess = error.message;
+      if(errorCode == "auth/weak-password"){
+       alert("The password is too weak");
+      }else{
+       alert(errorMessage);
+      }
+      console.log(error);
+     });
+    }
+   </script>
   </body>
  </html>
