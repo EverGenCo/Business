@@ -40,21 +40,23 @@
    </div>
    <script type="text/javascript">
     var email = document.getElementById("em").value;var pass = document.getElementById("pw").value;
-    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
-     var errorCode = error.code;
-     var errorMessage = error.message;
-     if(errorCode === "auth/invalid-email"){
-      alert("The email entered is not valid");
-     }else{
-      if(errorCode === "auth/email-already-in-use"){
-       alert("The email entered is already registered");
+    function reAcc(){
+     firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      if(errorCode === "auth/invalid-email"){
+       alert("The email entered is not valid");
       }else{
-       if(errorCode === "auth/weak-password"){
-        alert("The password entered is to simple.");
+       if(errorCode === "auth/email-already-in-use"){
+        alert("The email entered is already registered");
+       }else{
+        if(errorCode === "auth/weak-password"){
+         alert("The password entered is to simple.");
+        }
        }
       }
-     }
-    });
+     });
+    }
    </script>
   </body>
  </html>
