@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>GenCoin | EverGenCo</title>
+   <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+   <script type="text/javascript">
+    var config = {
+     apiKey: "AIzaSyBUoWlk5rfq348Iiu8hrkZ_xl3Wp74M7l0",
+     authDomain: "coins-8ce91.firebaseapp.com",
+     databaseUrl: "https://coins-8ce91.firebaseio.com",
+     storageBucket: "coins-8ce91.appspot.com",
+     messengerSenderId: "435694992025"
+    };
+    firebase.initializeApp(config);
+   </script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+    body{ font-family:Helvetica; }
+    form div{ display:block; }
+   </style>
+  </head>
+  <body>
+   <div align="center">
+    <form>
+     <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+      <input id="reg" type="button" class="form-control" name="Register" placeHolder="Register" onclick="gotoRA()">
+     </div>
+     <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-log-in"></i></span>
+      <input id="log" type="button" class="form-control" name="Log In" placeholder="Log In" onclick="gotoLI()">
+     </div>
+    </form>
+   </div>
+   <script type="text/javascript">
+    function gotoRA(){
+     window.location = "https://evergenco.github.io/Business/Software/CryptoCurrent/GenCoin/register.html";
+    }
+    function gotoLI(){
+     window.location = "Https://evergenco.github.io/Business/Software/CryptoCurrent/GenCoing/login.html";
+    }
+   </script>
+  </body>
+ </html>
