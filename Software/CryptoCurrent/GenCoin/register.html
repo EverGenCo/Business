@@ -22,7 +22,7 @@
    </style>
   </head>
   <body>
-   <div align="center">
+   <div align="center" id="divBody">
     <form>
      <div class="input-group col-xs-3">
       <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -32,7 +32,29 @@
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
       <input id="pw" type="text" class="form-control" name="password" placeholder="Password">
      </div>
+     <div class="input-group col-xs-3">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+      <input id="reg" type="button" class="form-control" value="Regsiter" onclick="reAcc()">
+     </div>
     </form>
    </div>
+   <script type="text/javascript">
+    var email = document.getElementById("em").value;var pass = document.getElementById("pw").value;
+    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
+     var errorCode = error.code;
+     var errorMessage = error.message;
+     if(errorCode === "auth/invalid-email"){
+      alert("The email entered is not valid");
+     }else{
+      if(errorCode === "auth/email-already-in-use"){
+       alert("The email entered is already registered");
+      }else{
+       if(errorCode === "auth/weak-password"){
+        alert("The password entered is to simple.");
+       }
+      }
+     }
+    });
+   </script>
   </body>
  </html>
