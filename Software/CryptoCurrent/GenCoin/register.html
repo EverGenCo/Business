@@ -40,7 +40,7 @@
    </div>
    <script type="text/javascript">
     var email = document.getElementById("em").value;var pass = document.getElementById("pw").value;
-    function reAcc(){
+    function reAcc(email,pass){
      firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
