@@ -1,1 +1,1 @@
-magenta.faucetfly.com,
+faucetfly.com:magenta,aqua,
