@@ -53,10 +53,15 @@
        }else{
         if(errorCode === "auth/weak-password"){
          alert("The password entered is to simple.");
+        }else{
+         if(errorCode === "null"){
+          alert("success");
+         }
         }
        }
       }
      });
+     document.getElementById("em").value = "";document.getElementById("pw").value = "";
     }
    </script>
   </body>
