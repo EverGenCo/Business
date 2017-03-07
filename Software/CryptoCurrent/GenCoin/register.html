@@ -34,12 +34,11 @@
      </div>
      <div class="input-group col-xs-3">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
-      <input id="reg" type="button" class="form-control" value="Regsiter" onclick="reAcc()">
+      <input id="reg" type="button" class="form-control" value="Regsiter" onclick="reAcc(document.getElementById('em'),document.getElementById('pw'))">
      </div>
     </form>
    </div>
    <script type="text/javascript">
-    var email = document.getElementById("em").value;var pass = document.getElementById("pw").value;
     function reAcc(email,pass){
      firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
       var errorCode = error.code;
