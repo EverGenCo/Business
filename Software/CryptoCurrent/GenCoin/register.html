@@ -54,13 +54,16 @@
          alert("The password entered is to simple.");
         }else{
          if(errorCode === "null"){
-          alert("success");
+          reAccComp();
          }
         }
        }
       }
      });
      document.getElementById("em").value = "";document.getElementById("pw").value = "";
+    }
+    function reAccComp(){
+     window.location = "https://evergenco.github.io/Business/Software/CryptoCurrent/GenCoin";
     }
    </script>
   </body>
