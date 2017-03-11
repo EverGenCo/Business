@@ -1,7 +1,7 @@
 {
  "questions": [
   {
-   "001": [
+   "quesOne": [
     {"ques": "What Is Code?"},
     {"answ": "Code is a programming language used for making websites."}
    ]
