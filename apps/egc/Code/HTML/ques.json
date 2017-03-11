@@ -1,9 +1,9 @@
 {
  "questions": [
   {
-   "001": {
-    "What Is Code?": "Codeis a programming language used for making websites."
-   }
+   "001": [
+    "What Is Code?","Code is   a programming language used for making websites."
+   ]
   }
  ]
 }
