@@ -1,7 +1,8 @@
 {
- "questions": {
-  "What is HTML?": {
+ "questions": [
+  "What is HTML?": [
    "Answer": "HTML is a programming language used to make websites."
-  }
+   }
+  ]
  }
 }
