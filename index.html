@@ -25,7 +25,7 @@
    <script type="text/javascript">
     function signUp(){
      var mail = document.getElementById("in1").value;
-     var pass = document.geTelementById("in2").value;
+     var pass = document.getElementById("in2").value;
      firebase.auth().createUserWithEmailAndPassword(mail, pass).catch(function(error){
       var eCode = error.code;
       var eMess = error.message;
