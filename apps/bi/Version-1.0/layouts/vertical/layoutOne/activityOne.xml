@@ -8,7 +8,7 @@
                 android:paddingLeft="@dimen/leftPad"
                 android:paddingRight="@dimen/rightPad"
                 android:paddingTop="@dimen/topPad"
-                tools:context="@tool/src" >
+                tools:context="@string/src" >
   <LinearLayout android:id="@+id/layoutOne"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
