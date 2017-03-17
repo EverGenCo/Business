@@ -9,4 +9,11 @@
                 android:paddingRight="@dimens/rightPad"
                 android:paddingTop="@dimens/topPad"
                 tools:context="@string/src" >
+  <LinearLayout android:id="@+id/layoutOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundOne"
+                android:orientation="vertical"
+                android:gravity="center" >
+  </LinearLayout>
 </RelativeLayout>
