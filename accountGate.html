@@ -39,10 +39,12 @@
     function logIn(){
      var from = window.location.search;
      var res = from.substring().replace("?", "");
-     document.body.innerHTML += res;
+     window.location = "https://evergenco.github.io/Business/Account/logIn.html?"+res;
     }
     function signUp(){
-     window.location = "https://evergenco.github.io/Business/Account/signUp.html";
+     var from = window.location.search;
+     var res = from.substring().replace("?", "");
+     window.location = "https://evergenco.github.io/Business/Account/signUp.html"+res;
     }
    </script>
   </body>
