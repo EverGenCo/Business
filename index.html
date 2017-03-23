@@ -1,46 +1,10 @@
-<!DOCTYPE html>
+<DOCTYPE! html>
  <html>
   <head>
-   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
-   <script>
-    var config = {
-     apiKey: "AIzaSyCQw5l7W-r1aBt_1n9dePGpXj-FgmyDSq8",
-     authDomain: "evergenco-93c31.firebaseapp.com",
-     databaseURL: "https://evergenco-93c31.firebaseio.com",
-     storageBucket: "evergenco-93c31.appspot.com",
-     messagingSenderId: "657664211832"
-    };
-    firebase.initializeApp(config);
-   </script>
    <title>EverGenCo</title>
-   <style>
-   </style>
+   <link rel="stylesheet" href="https://maxcdn.bootsrtapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script 
   </head>
   <body>
-   <div align="center">
-    <input type="text" value="E-Mail" onfocus="value=''" id="in1" />
-    <input type="text" value="Password" onfocus="value=''" id="in2" />
-    <input type="button" value="SignUp" onclick="signUp()" />
-   </div>
-   <script type="text/javascript">
-    function signUp(){
-     var mail = document.getElementById("in1").value;
-     var pass = document.getElementById("in2").value;
-     firebase.auth().createUserWithEmailAndPassword(mail, pass).catch(function(error){
-      var eCode = error.code;
-      var eMess = error.message;
-      if(errorCode == "auth/weak-password"){
-       alert("The password is too weak");
-      }else{
-       alert(errorMessage);
-      }
-      console.log(error);
-     });
-     writeData(mail);
-    }
-    function writeData(mail){
-     var data = firebase.database();
-    }
-   </script>
   </body>
  </html>
