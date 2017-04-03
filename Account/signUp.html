@@ -34,8 +34,8 @@
     </div>
    </div>
    <script type="text/javascript">
-    var email = document.getElementById("EMail").value;var pass = document.getElementById("Password").value;
     function signUp(){
+     var email = document.getElementById("EMail").value;var pass = document.getElementById("Password").value;
      firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
