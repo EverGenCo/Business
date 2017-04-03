@@ -16,21 +16,11 @@
    <div id="divBody" align="center">
     <div class="input-group col-xs-3">
      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-     <input class="form-control" type="text" id="UserName" placeholder="UserName">
+     <input class="form-control" type="text" id="EMail" placeholder="UserName">
     </div>
     <div class="input-group col-xs-3">
-     <span class="input-group-addon"><i class="glypicon glyphicon-lock"></i></span>
+     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
      <input class="form-control" type="text" id="Password" placeholder="Password">
-    </div>
-    <div class="input-group col-xs-3">
-     <input class="form-control" type="text" id="EMail" placeholder="E-Mail">
-    </div>
-    <div class="input-group col-xs-3">
-     <input class="form-control" type="text" id="FullName" placeholder="Full Name">
-    </div>
-    <div class="input-group col-xs-3">
-     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-     <input class="form-control" type="button" value="SignUp" onclick="signUp()">
     </div>
    </div>
    <script type="text/javascript">
@@ -41,23 +31,11 @@
       var errorMessage = error.message;
       alert(errorCode+": "+errorMessage);
      });
-     setTimeout(function(){signIn(email,pass);},500);
+     setTimeout(function(){clear();},500);
     }
-    function signIn(email, pass){
-     firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error){
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorCode+": "+errorMessage);
-     });
-     setTimeout(function(){writeUserData();alert("Please wait while writing your data.");},500);
-    }
-    function writeUserData(){
-     var full = document.getElementById("FullName").value;var user = document.getElementById("UserName").value;
-     var uid = firebase.auth().currentUser.uid;
-     firebase.database().ref('users/'+uid).set({
-      fullName: full,
-      screenName: user
-     });
+    function clear(){
+     document.getElementById("EMail").value = "";document.getElementById("Password").value = "";
+     window.location = "https://evergenco.github.io/Business";
     }
    </script>
   </body>
