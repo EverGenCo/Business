@@ -49,8 +49,8 @@
      firebase.auth.createUserWithEmailAndPassword(em, pass).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
+      alert(errorCode+": "+errorMessage);
      });
-     window.location = "https://evergenco.github.io/Business/accountGate.html?="+user+","+fn;
     }
    </script>
   </body>
