@@ -41,6 +41,7 @@
       var errorMessage = error.message;
       alert(errorCode+": "+errorMessage);
      });
+    }
      setTimeout(function(){signIn(email, pass);},500);
     function signIn(email, pass){
      firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error){
