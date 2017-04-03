@@ -30,18 +30,11 @@
     </div>
     <div class="input-group col-xs-3">
      <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-     <input class="form-control" type="button" value="SignUp" onclick="signUp">
+     <input class="form-control" type="button" value="SignUp" onclick="signUp()">
     </div>
    </div>
    <script type="text/javascript">
-    function signUp(){
-     var user = document.getElementById("UserName").value;var pass = document.getElementById("Password").value;var em = document.getElementById("EMail").value;var fn = document.getElementById("FullName").value;
-     firebase.auth.createUserWithEmailAndPassword(em, pass).catch(function(error){
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorCode+": "+errorMessage);
-     });
-    }
+
    </script>
   </body>
  </html>
