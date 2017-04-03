@@ -53,7 +53,7 @@
     function writeUserData(){
      var full = document.getElementById("FullName").value;var user = document.getElementById("UserName").value;
      var uid = firebase.auth().currentUser.uid;
-     function.database().ref('users/'+uid).set({
+     firebase.database().ref('users/'+uid).set({
       fullName: full,
       screenName: user
      });
