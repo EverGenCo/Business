@@ -41,20 +41,22 @@
       var errorMessage = error.message;
       alert(errorCode+": "+errorMessage);
      });
-     setTimeout(function(){signIn(email, pass);},2000);
-    }
+     setTimeout(function(){signIn(email, pass);},500);
     function signIn(email, pass){
      firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorCode+": "+errorMessage);
      });
-     setTimeout(function(){writeUserData();alert("Please wait while writing your data.");},2000);
+     setTimeout(function(){writeUserData();alert("Please wait while writing your data.");},500);
     }
     function writeUserData(){
      var full = document.getElementById("FullName").value;var user = document.getElementById("UserName").value;
      var uid = firebase.auth().currentUser.uid;
-     alert(uid);
+     function.database().ref('users/'+uid).set({
+      fullName: full,
+      screenName: user
+     });
     }
    </script>
   </body>
