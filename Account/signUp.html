@@ -49,6 +49,7 @@
       var errorMessage = error.message;
       alert(errorCode+": "+errorMessage);
      });
+     setTimeout(function(){writeUserData();alert("Please wait while writing your data.");},2000);
     }
    </script>
   </body>
