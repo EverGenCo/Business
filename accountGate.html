@@ -38,7 +38,8 @@
    <script type="text/javascript">
     function logIn(){
      var search = window.location.search;
-     document.body.innerHTML += search;
+     var res = search.replace("?", "");
+     window.location = "https://evergenco.github.io/Business/Account/logIn.html?"+res;
     }
     function signUp(){
      window.location = "https://evergenco.github.io/Business/Account/signUp.html";
