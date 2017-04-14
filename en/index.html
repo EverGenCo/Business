@@ -9,9 +9,35 @@
    <script>var config = {    apiKey: "AIzaSyCQw5l7W-r1aBt_1n9dePGpXj-FgmyDSq8",    authDomain: "evergenco-93c31.firebaseapp.com",    databaseURL: "https://evergenco-93c31.firebaseio.com",    projectId: "evergenco-93c31",    storageBucket: "evergenco-93c31.appspot.com",    messagingSenderId: "657664211832"  };  firebase.initializeApp(config);</script>
    <style>
     body{ font-family:Helvetica; }
-    ul.il li{ display:inline;list-style-type:none; }
+    .il li{ display:inline;list-style-type:none; }
+    .innerJumbo{ background:"#00FFFF"; }
    </style>
   </head>
   <body>
+   <div class="container">
+    <div class="jumbotron text-center">
+     <div class="innerJumbo">
+      <h1 id="jumboText"></h1>
+     </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container-fluid">
+      <div class="navbar-headder">
+       <a class="navbar-brand" href="https://evergenco.github.io/Business/en">EverGenCO | Official: English</a>
+      </div>
+     </div>
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Financial</a>
+       <ul class="dropdown-menu">
+        <li><a href="https://evergenco.github.io/Business/en/accountGate.html?PayOut">PayOut</a></li>
+        <li><a href="https://evergenco.github.io/Business/en/accountGate.html?InVest">InVest</a></li>
+        <li><a href="https://evergenco.github.io/Business/en/accountGate.html?CoinCard">CoinCard</a></li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div id="divBody"></div>
   </body>
  </html>
