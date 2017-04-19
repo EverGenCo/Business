@@ -39,7 +39,8 @@
    </div>
    <div id="divBody"></div>
    <script type="text/javascript">
-    document.getElementById("banking").addEventListener("click", function(){window.location="https://evergenco.github.io/Business/en/bank.html";});
+    var bank = '<div align="center">';bank += '</div>';
+    document.getElementById("banking").addEventListener("click", function(){document.getElementById("divBody").innerHTML = bank;document.getElementById("jumboText").innerHTML = "Finance | Banking";});
    </script>
   </body>
  </html>
