@@ -1,0 +1,46 @@
+<DOCTYPE! html>
+ <html>
+  <head>
+   <title>SaveUpNow @ BankYou | EGC</title>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://www.gstatic.com/firebasjs/3.9.0/firebase.js"></script>
+   <script>var config = { apiKey: "AIzaSyCQw517W-r1aBt_1n9dePGpXj-FgmyDSq8", authDomain: "evergenco-93c31.firebaseapp.com", databaseURL: "https://evergenco-93c31.firebaseio.com", projectId: "evergenco-93c31", storageBucket: "evergenco-93c31.appspot.com", messagingSenderId: "657664211832" };firebase.initializeApp(config);</script>
+   <style>
+    body{ font-family:Helvetica; }
+   </style>
+  </head>
+  <body>
+   <div class="jumbotron text-center">
+    <div class="innerJumbo">
+     <h1 id="jumboText">Save Up Now</h1>
+     <div id="innerJumbo"></div>
+    </div>
+    <div class="container">
+     <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+       <div class="navbar-header">
+        <a class="navbar-brand" href="https://evergenco.github.io/Business/en"><font color="#00CCCC">EverGenCo | Official: English</font></a>
+       </div>
+      </div>
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><font color="#00CCCC">Finances</font></a>
+        <ul class="dropdown-menu">
+         <li><p id="banking">Banking</p></li>
+         <li><p id="investing">Investing</p></li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </div>
+   <div id="divBody"></div>
+   <script type="text/javascript">
+    var bankPage = "<div>";bankPage += "</div>";
+    var bankSel = '<iframe src="https://evergenco.github.io/Business/en/bankCarousel.html" frameborder="none" id="bankFrame"></iframe>';
+    document.getElementById("banking").addEventListener("click", function(){document.getElementById("jumboText").innerHTML = "Finance | Banking";document.getElementById("innerJumbo"} += bankSel;document.getElementById("bankGrame").style.width = window.innerWidth;document.getElementById("bankFrame").style.height = "400px";);
+   </script>
+  </body>
+ </html>
